@@ -1,0 +1,7 @@
+preprocess:
+  normalize: true
+
+train:
+  lr: 0.01
+  batch_size: 64
+  epochs: 5
