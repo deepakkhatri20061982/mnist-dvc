@@ -14,3 +14,8 @@ dvc metrics diff
 
 dvc params diff
 
+
+# Check Experiments
+dvc exp show
+
+dvc exp diff
