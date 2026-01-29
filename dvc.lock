@@ -10,8 +10,8 @@ stages:
       nfiles: 8
     - path: params.yaml
       hash: md5
-      md5: 3fda46d602324596dd7591c968d5b422
-      size: 86
+      md5: c40d976e40f276977ef72f41bf23bc84
+      size: 89
     - path: src/preprocess.py
       hash: md5
       md5: 87f00b1743382d8f4398cc25e8bf6889
@@ -32,8 +32,8 @@ stages:
       nfiles: 2
     - path: params.yaml
       hash: md5
-      md5: 3fda46d602324596dd7591c968d5b422
-      size: 86
+      md5: c40d976e40f276977ef72f41bf23bc84
+      size: 89
     - path: src/model.py
       hash: md5
       md5: 3c8177d5f84f4543ee9070f025927c79
@@ -45,9 +45,9 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 4ff9c4bb75ac4e296d230e89adab94f6
-      size: 60
+      md5: 4873d179b46176465b795a494ef854c8
+      size: 61
     - path: model.pt
       hash: md5
-      md5: 08bdd60667a52b9159e246f185d2a5f1
+      md5: cfd915a14582644c38a7c3fa407750fe
       size: 33237

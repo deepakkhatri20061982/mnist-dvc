@@ -2,6 +2,6 @@ preprocess:
   normalize: false
 
 train:
-  lr: 0.01
-  batch_size: 64
-  epochs: 5
+  lr: 0.001
+  batch_size: 128
+  epochs: 10
