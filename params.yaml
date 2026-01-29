@@ -1,5 +1,5 @@
 preprocess:
-  normalize: true
+  normalize: false
 
 train:
   lr: 0.01
