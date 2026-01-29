@@ -1,7 +1,7 @@
 preprocess:
-  normalize: false
+  normalize: true
 
 train:
-  lr: 0.001
-  batch_size: 128
-  epochs: 10
+  lr: 0.002
+  batch_size: 64
+  epochs: 15
