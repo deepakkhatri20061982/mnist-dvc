@@ -7,6 +7,8 @@ dvc stage add -n train -d src/train.py -d src/model.py -d data/processed -d para
 # To run using DVC
 dvc repro
 
+dvc repro create_experiment --force --downstream
+
 # Check Metrics
 dvc metrics show
 
