@@ -1,10 +1,17 @@
 stages:
+  create_experiment:
+    cmd: python src/create_experiment.py
+    deps:
+      - src/create_experiment.py
+    outs:
+      - experiments/experiment.yaml
   preprocess:
     cmd: python src/preprocess.py
     deps:
     - data/raw
     - params.yaml
     - src/preprocess.py
+    - experiments/experiment.yaml
     outs:
     - data/processed
   train:
@@ -14,6 +21,7 @@ stages:
     - params.yaml
     - src/model.py
     - src/train.py
+    - experiments/experiment.yaml
     outs:
     - model.pt
     metrics:

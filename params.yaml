@@ -5,3 +5,4 @@ train:
   lr: 0.002
   batch_size: 64
   epochs: 15
+  cv_folds: 5

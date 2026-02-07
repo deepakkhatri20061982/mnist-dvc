@@ -8,46 +8,66 @@ stages:
       md5: ab3353d41bd7a24a20a31f29b64e3b3c.dir
       size: 66544770
       nfiles: 8
+    - path: experiments/experiment.yaml
+      hash: md5
+      md5: e542daaaa664e51c2c458ec41f318b4a
+      size: 63
     - path: params.yaml
       hash: md5
-      md5: 56b703bbf9bbe80d7372094dcf5052c7
-      size: 87
+      md5: d6e815577ba5ea5d7944d044392da482
+      size: 102
     - path: src/preprocess.py
       hash: md5
-      md5: 87f00b1743382d8f4398cc25e8bf6889
-      size: 843
+      md5: 8ab3c15feaa188258032683c5a139b43
+      size: 1522
     outs:
     - path: data/processed
       hash: md5
-      md5: f661790bcf02dbffdd4b9a769a78fe0d.dir
-      size: 188643012
+      md5: 3d39c3601c6a28328f133761eebbc323.dir
+      size: 188642222
       nfiles: 2
   train:
     cmd: python src/train.py
     deps:
     - path: data/processed
       hash: md5
-      md5: f661790bcf02dbffdd4b9a769a78fe0d.dir
-      size: 188643012
+      md5: 3d39c3601c6a28328f133761eebbc323.dir
+      size: 188642222
       nfiles: 2
+    - path: experiments/experiment.yaml
+      hash: md5
+      md5: e542daaaa664e51c2c458ec41f318b4a
+      size: 63
     - path: params.yaml
       hash: md5
-      md5: 56b703bbf9bbe80d7372094dcf5052c7
-      size: 87
+      md5: d6e815577ba5ea5d7944d044392da482
+      size: 102
     - path: src/model.py
       hash: md5
       md5: 3c8177d5f84f4543ee9070f025927c79
       size: 222
     - path: src/train.py
       hash: md5
-      md5: b9eb17bdf234da24eea9e31aafe0d208
-      size: 903
+      md5: 57791792c9a6449d4fca8dc2f18fe42a
+      size: 1607
     outs:
     - path: metrics.json
       hash: md5
-      md5: a462e6b4ef877ece461263fe9f28f35d
-      size: 61
+      md5: 8294bafe28d9edad75de35ca85fa95e0
+      size: 60
     - path: model.pt
       hash: md5
-      md5: 5273a03e95999dded3fe0d30d4cbe79f
-      size: 33237
+      md5: a193111fe9149ea49fe245688c386d86
+      size: 32844
+  create_experiment:
+    cmd: python src/create_experiment.py
+    deps:
+    - path: src/create_experiment.py
+      hash: md5
+      md5: 0361e6baa1b13e7cb70d3e61a69d673a
+      size: 384
+    outs:
+    - path: experiments/experiment.yaml
+      hash: md5
+      md5: e542daaaa664e51c2c458ec41f318b4a
+      size: 63
