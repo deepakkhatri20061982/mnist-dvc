@@ -5,7 +5,7 @@ import json
 import yaml
 from model import LogisticRegression
 import mlflow
-import mlflow.pytorch
+import mlflow.sklearn
 from torch.utils.data import TensorDataset, DataLoader
 import joblib
 
