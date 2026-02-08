@@ -65,6 +65,7 @@ with mlflow.start_run(run_name="training"):
     torch.save(model.state_dict(), "model.pt")
     mlflow.log_metric("loss", loss.item())
     mlflow.log_metric("accuracy", accuracy)
+    mlflow.sklearn.log_model(model)
 
     joblib.dump(model.state_dict(), "model.pkl")
     mlflow.log_artifact("model.pkl", artifact_path="model")
@@ -74,4 +75,4 @@ with mlflow.start_run(run_name="training"):
     
 
     mlflow.end_run(status="FINISHED")
-    
+

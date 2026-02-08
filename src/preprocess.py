@@ -51,3 +51,6 @@ with mlflow.start_run(run_name="preprocess"):
     mlflow.log_metric("num_samples", len(images))
     mlflow.log_artifact("data/processed/images.pt")
 
+    mlflow.end_run(status="FINISHED")
+    
+
