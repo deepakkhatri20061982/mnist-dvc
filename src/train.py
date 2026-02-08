@@ -71,3 +71,7 @@ with mlflow.start_run(run_name="training"):
 
     with open("metrics.json", "w") as f:
         json.dump({"accuracy": accuracy, "loss": loss.item()}, f)
+    
+
+    mlflow.end_run(status="FINISHED")
+    
