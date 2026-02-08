@@ -32,7 +32,7 @@ with mlflow.start_run(run_name="preprocess"):
         transform=transform
     )
 
-    loader = DataLoader(dataset, batch_size=1000)
+    loader = DataLoader(dataset, batch_size=64, shuffle=True)
 
     os.makedirs("data/processed", exist_ok=True)
 

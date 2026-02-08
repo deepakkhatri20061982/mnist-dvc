@@ -6,3 +6,4 @@ train:
   batch_size: 64
   epochs: 15
   cv_folds: 5
+  max_iter: 1000

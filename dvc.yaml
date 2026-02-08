@@ -27,3 +27,12 @@ stages:
     metrics:
     - metrics.json:
         cache: false
+  predict:
+    cmd: python src/predict.py
+    deps:
+    - data/processed
+    - params.yaml
+    - src/model.py
+    - src/train.py
+    - model.pt
+    - experiments/experiment.yaml

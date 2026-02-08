@@ -3,7 +3,14 @@ import torch.nn as nn
 class LogisticRegression(nn.Module):
     def __init__(self):
         super().__init__()
-        self.linear = nn.Linear(28 * 28, 10)
+        self.net = nn.Sequential(
+            nn.Linear(784, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Linear(128, 10)
+        )
 
     def forward(self, x):
-        return self.linear(x)
+        return self.net(x)
+
