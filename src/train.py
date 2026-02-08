@@ -67,7 +67,7 @@ with mlflow.start_run(run_name="training"):
     mlflow.log_metric("accuracy", accuracy)
 
     joblib.dump(model.state_dict(), "model.pkl")
-    mlflow.log_artifact("model.pkl", artifact_path="model")
+    mlflow.log_artifact("../model.pkl", artifact_path="model")
 
     with open("metrics.json", "w") as f:
         json.dump({"accuracy": accuracy, "loss": loss.item()}, f)
